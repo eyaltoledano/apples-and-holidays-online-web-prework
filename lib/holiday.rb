@@ -59,8 +59,6 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
   holiday_hash.each do |season, event|
     puts "#{season.to_s.capitalize!}:"
-
-
     event.each do |event, supply_array|
       event = event.to_s.split("_").map(&:capitalize).join(" ")
       puts "  #{event}: " + "#{supply_array.join(", ")}"
